@@ -45,7 +45,7 @@ print("✔ Gráfica 3 generada.")
 
 # --- GRÁFICA 4: Metas Financieras más Comunes ---
 plt.figure(figsize=(8, 5))
-sns.countplot(y='meta_financiera', data=df, order=df['meta_financiera'].value_counts().index, palette="Viridis", hue='meta_financiera', legend=False)
+sns.countplot(y='meta_financiera', data=df, order=df['meta_financiera'].value_counts().index, palette="viridis", hue='meta_financiera', legend=False)
 plt.title('4. Frecuencia de Metas Financieras en LATAM')
 plt.savefig(f"{charts_dir}/metas_financieras.png", dpi=300, bbox_inches='tight')
 plt.close()
