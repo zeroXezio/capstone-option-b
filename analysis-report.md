@@ -28,5 +28,4 @@ Se han generado **5 visualizaciones** almacenadas en la carpeta `charts/`:
 ## 4. Conclusiones y Demostración
 El análisis confirma una correlación positiva entre la adopción tecnológica (IA) y la satisfacción financiera.
 
-## 5. Demostración en Vivo
-* **URL del Video Demo (5 minutos):** [AQUÍ PEGARÁS TU ENLACE DE YOUTUBE]
+
