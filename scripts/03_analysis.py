@@ -3,54 +3,59 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-# 1. Definir rutas de archivos
+# 1. Rutas
 clean_path = "data/latam_finanzas_clean.csv"
-plots_dir = "plots"
-os.makedirs(plots_dir, exist_ok=True)
+charts_dir = "charts"
+os.makedirs(charts_dir, exist_ok=True)
 
-# 2. Cargar el dataset limpio
+# Cargar datos
 df = pd.read_csv(clean_path)
-
-print("==============================================================")
-print("PHASE 3: DATA ANALYSIS & VISUALIZATION")
-print("==============================================================")
-
-# 3. Métrica Clave 1: Promedio de ingresos y ahorros por país
-print("\n[1] Resumen Financiero Promedio por País:")
-resumen_pais = df.groupby('pais')[['ingreso_mensual_usd', 'ahorro_mensual_usd']].mean()
-print(resumen_pais.round(2).to_string())
-
-# 4. Métrica Clave 2: ¿Quienes usan más IA tienen más satisfacción financiera?
-print("\n[2] Impacto del Uso de IA en la Satisfacción Financiera:")
-ia_impacto = df.groupby('satisfaccion_financiera')['horas_herramientas_ia_semana'].mean()
-print(ia_impacto.round(2).to_string())
-
-# 5. GENERAR Y GUARDAR GRÁFICA PROFESIONAL
-print("\n[3] Generando gráfico de barras: Ahorro Mensual Promedio por País...")
-
-# Configurar el estilo visual del gráfico
 sns.set_theme(style="whitegrid")
-plt.figure(figsize=(10, 6))
 
-# Crear la gráfica de barras
-grafica = sns.barplot(
-    x=resumen_pais.index, 
-    y='ahorro_mensual_usd', 
-    data=resumen_pais, 
-    palette="Blues_r",
-    hue=resumen_pais.index,
-    legend=False
-)
+print("==============================================================")
+print("GENERANDO LAS 5 GRÁFICAS REQUERIDAS POR LA RÚBRICA...")
+print("==============================================================")
 
-# Añadir títulos y etiquetas limpias
-plt.title('Ahorro Mensual Promedio por País en LATAM (2025)', fontsize=14, pad=15, weight='bold')
-plt.xlabel('País', fontsize=12, labelpad=10)
-plt.ylabel('Ahorro Promedio (USD)', fontsize=12, labelpad=10)
-
-# Guardar la gráfica en la carpeta 'plots'
-plot_output_path = os.path.join(plots_dir, "ahorro_promedio_pais.png")
-plt.savefig(plot_output_path, dpi=300, bbox_inches='tight')
+# --- GRÁFICA 1: Ahorro Promedio por País ---
+plt.figure(figsize=(8, 5))
+resumen_pais = df.groupby('pais')['ahorro_mensual_usd'].mean().reset_index()
+sns.barplot(x='pais', y='ahorro_mensual_usd', data=resumen_pais, palette="Blues_r", hue='pais', legend=False)
+plt.title('1. Ahorro Mensual Promedio por País')
+plt.savefig(f"{charts_dir}/ahorro_promedio_pais.png", dpi=300, bbox_inches='tight')
 plt.close()
+print("✔ Gráfica 1 generada.")
 
-print(f"✔ ¡Gráfico exportado con éxito a: '{plot_output_path}'!")
+# --- GRÁFICA 2: Impacto de la IA en la Satisfacción ---
+plt.figure(figsize=(8, 5))
+ia_impacto = df.groupby('satisfaccion_financiera')['horas_herramientas_ia_semana'].mean().reset_index()
+sns.lineplot(x='satisfaccion_financiera', y='horas_herramientas_ia_semana', data=ia_impacto, marker="o", color="green", linewidth=2.5)
+plt.title('2. Horas de IA Semanales vs Satisfacción Financiera')
+plt.savefig(f"{charts_dir}/impacto_ia_satisfaccion.png", dpi=300, bbox_inches='tight')
+plt.close()
+print("✔ Gráfica 2 generada.")
+
+# --- GRÁFICA 3: Distribución de Ingresos por Industria ---
+plt.figure(figsize=(10, 5))
+sns.boxplot(x='industria', y='ingreso_mensual_usd', data=df, palette="Set2", hue='industria', legend=False)
+plt.xticks(rotation=15)
+plt.title('3. Distribución de Ingresos Mensuales por Industria')
+plt.savefig(f"{charts_dir}/ingresos_por_industria.png", dpi=300, bbox_inches='tight')
+plt.close()
+print("✔ Gráfica 3 generada.")
+
+# --- GRÁFICA 4: Metas Financieras más Comunes ---
+plt.figure(figsize=(8, 5))
+sns.countplot(y='meta_financiera', data=df, order=df['meta_financiera'].value_counts().index, palette="Viridis", hue='meta_financiera', legend=False)
+plt.title('4. Frecuencia de Metas Financieras en LATAM')
+plt.savefig(f"{charts_dir}/metas_financieras.png", dpi=300, bbox_inches='tight')
+plt.close()
+print("✔ Gráfica 4 generada.")
+
+# --- GRÁFICA 5: Relación entre Ingreso y Ahorro ---
+plt.figure(figsize=(8, 5))
+sns.scatterplot(x='ingreso_mensual_usd', y='ahorro_mensual_usd', hue='tiene_tarjeta_credito', data=df, alpha=0.7)
+plt.title('5. Relación entre Ingresos y Ahorros Mensuales')
+plt.savefig(f"{charts_dir}/relacion_ingreso_ahorro.png", dpi=300, bbox_inches='tight')
+plt.close()
+print("✔ Gráfica 5 generada. ¡Mínimo de la rúbrica cumplido!")
 print("==============================================================")
