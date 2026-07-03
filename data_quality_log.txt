@@ -1,0 +1,15 @@
+========================================================================
+DATA QUALITY & CLEANING LOG — FUTURO DIGITAL LATAM
+========================================================================
+
+[MISSING VALUES] Found 33 null rows in 'gasto_salud_usd'.
+   -> Strategy: Imputed missing values with column median: $45.66 USD.
+
+[CATEGORICAL TEXT] Found 10 inconsistent records in 'industria'.
+   -> Strategy: Standardized variants to 'Tecnología' and applied str.strip() to all text columns.
+
+[NUMERIC ANOMALIES] Detected 74 rows with negative values in 'ahorro_mensual_usd'.
+   -> Strategy: Preserved values intact because negative savings represent a real financial deficit (spending exceeds income).
+
+[OUTPUT] Clean dataset successfully exported to: 'data/latam_finanzas_clean.csv' (500 rows).
+========================================================================
