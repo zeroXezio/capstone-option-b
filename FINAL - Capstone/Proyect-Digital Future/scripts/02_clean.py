@@ -1,33 +1,37 @@
 import os
 import pandas as pd
 
-def limpiar_datos():
-    ruta_original = os.path.join("data", "latam_finanzas_2025.csv")
-    ruta_salida = os.path.join("data", "latam_finanzas_2025_cleaned.csv")
+def clean_dataset():
+    # Asegurar rutas correctas
+    input_path = "data/latam_finanzas_2025.csv"
+    output_dir = "data"
+    output_path = os.path.join(output_dir, "latam_finanzas_clean.csv")
     
-    print("=== INICIANDO PIPELINE DE LIMPIEZA ===")
-    
-    # 1. Cargar archivo original
-    df = pd.read_csv(ruta_original)
-    
-    # 2. Anonimizar datos (Eliminar columna 'nombre' por privacidad)
-    if 'nombre' in df.columns:
-        df = df.drop(columns=['nombre'])
-        print("✅ Columna 'nombre' eliminada con éxito por privacidad.")
-    
-    # 3. Tratar valores nulos en 'gasto_salud_usd'
-    # Usaremos la mediana para evitar que valores extremos afecten el promedio
-    mediana_salud = df['gasto_salud_usd'].median()
-    df['gasto_salud_usd'] = df['gasto_salud_usd'].fillna(mediana_salud)
-    print(f"✅ Se imputaron los 33 valores nulos en 'gasto_salud_usd' usando la mediana ({mediana_salud} USD).")
-    
-    # 4. Verificar que ya no queden nulos
-    nulos_restantes = df.isnull().sum().sum()
-    print(f"🔍 Valores nulos restantes en el dataset: {nulos_restantes}")
-    
-    # 5. Guardar el nuevo dataset limpio
-    df.to_csv(ruta_salida, index=False)
-    print(f"🎉 ¡Fase 2 completada! Archivo limpio guardado en: {ruta_salida}")
+    if not os.path.exists(input_path):
+        print(f"Error: {input_path} not found.")
+        return
+
+    # 1. Cargar el dataset original
+    df = pd.read_csv(input_path)
+    print(f"Initial shape: {df.shape[0]} rows, {df.shape[1]} columns")
+
+    # PROBLEM 1: Direct PII exposure (Participant names)
+    # FIX: Drop the 'nombre' column entirely to guarantee data privacy.
+    df_clean = df.drop(columns=['nombre'])
+    print("- Problem 1 Fixed: Removed 'nombre' column for participant privacy.")
+
+    # PROBLEM 2: 33 missing values identified in 'gasto_salud_usd'
+    # FIX: Robust statistical imputation using the regional median ($45.66)
+    regional_median_health = df_clean['gasto_salud_usd'].median() # Arroja 45.66
+    missing_count = df_clean['gasto_salud_usd'].isna().sum()
+    df_clean['gasto_salud_usd'] = df_clean['gasto_salud_usd'].fillna(regional_median_health)
+    print(f"- Problem 2 Fixed: Imputed {missing_count} null rows in 'gasto_salud_usd' using regional median (${regional_median_health:.2f}).")
+
+    # Guardar archivo limpio
+    os.makedirs(output_dir, exist_ok=True)
+    df_clean.to_csv(output_path, index=False)
+    print(f"Cleaned dataset successfully saved to: {output_path}")
+    print(f"Final shape: {df_clean.shape[0]} rows, {df_clean.shape[1]} columns")
 
 if __name__ == "__main__":
-    limpiar_datos()
+    clean_dataset()
