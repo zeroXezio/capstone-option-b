@@ -64,7 +64,7 @@ Los usuarios que poseen tarjetas de crédito activas reportan niveles de deuda t
 
 
 
-!\[Impacto de Tarjetas de Crédito]
+![Impacto de Tarjetas de Crédito]
 
 
 
