@@ -44,7 +44,7 @@ El análisis de regresión lineal indica una correlación positiva moderada entr
 
 
 
-!\[Regresión Edad vs Ahorro](../../charts/02\_age\_vs\_savings.png)
+!\[Regresión Edad vs Ahorro](FINAL - Capstone/Proyect-Digital Future/charts/01\_income\_by\_country.png)
 
 
 
