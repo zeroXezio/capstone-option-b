@@ -26,12 +26,6 @@ La muestra está compuesta por 500 jóvenes profesionales de América Latina per
 
 ## 4\. Hallazgos Financieros (Formato Estricto de Skill /interpret)
 
-### Hallazgo 1: Comparativa de Ingresos por País (Ref: charts/01\_income\_by\_country.png)
-
-Los encuestados muestran una disparidad notable en sus ingresos mensuales promedios según su ubicación geográfica en la región. Esta brecha subraya la necesidad de diseñar programas de educación financiera con canastas de presupuesto y metas de ahorro adaptadas al costo de vida local de cada nación. Por lo tanto, la plataforma debe segmentar sus módulos formativos automáticamente según el país de residencia del usuario.
-
-\## 4. Hallazgos Financieros
-
 
 
 \### Hallazgo 1: Comparativa de Ingresos por País
