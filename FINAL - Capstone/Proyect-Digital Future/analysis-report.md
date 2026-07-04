@@ -44,7 +44,7 @@ El análisis de regresión lineal indica una correlación positiva moderada entr
 
 
 
-!\[image alt](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/02\_age\_vs\_savings.png)
+!\[image alt](https://github.com/zeroXezio/capstone-option-b/blob/1677d7946d15fba3b014504dc1f65736198a1694/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/01_income_by_country.png)
 
 
 
