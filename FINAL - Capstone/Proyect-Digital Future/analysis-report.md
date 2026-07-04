@@ -34,7 +34,7 @@ Los encuestados muestran una disparidad notable en sus ingresos mensuales promed
 
 
 
-!\[Comparativa de Ingresos por País](charts/01\_income\_by\_country.png)
+!\[Comparativa de Ingresos por País](../../charts/01\_income\_by\_country.png)
 
 
 
@@ -44,7 +44,7 @@ El análisis de regresión lineal indica una correlación positiva moderada entr
 
 
 
-!\[Regresión Edad vs Ahorro](charts/02\_age\_vs\_savings.png)
+!\[Regresión Edad vs Ahorro](../../charts/02\_age\_vs\_savings.png)
 
 
 
@@ -54,7 +54,7 @@ La estructura de gastos promedio regional evidencia que la vivienda y la aliment
 
 
 
-!\[Distribución de Gastos Regionales](charts/03\_spending\_breakdown.png)
+!\[Distribución de Gastos Regionales](../../charts/03\_spending\_breakdown.png)
 
 
 
@@ -64,7 +64,7 @@ Los usuarios que poseen tarjetas de crédito activas reportan niveles de deuda t
 
 
 
-!\[Impacto de Tarjetas de Crédito](charts/03\_spending\_breakdown.png)
+!\[Impacto de Tarjetas de Crédito]
 
 
 
@@ -74,7 +74,7 @@ Existe una correlación positiva medible entre el número de horas semanales ded
 
 
 
-!\[Uso de IA vs Satisfacción](charts/04\_satisfaction\_by\_ia.png)
+!\[Uso de IA vs Satisfacción](../../charts/04\_satisfaction\_by\_ia.png)
 
 
 
@@ -84,7 +84,7 @@ La carga financiera destinada a la vivienda supera el umbral crítico recomendad
 
 
 
-!\[Carga de Vivienda por País](charts/05\_housing\_burden\_by\_country.png)
+!\[Carga de Vivienda por País](../../charts/05\_housing\_burden\_by\_country.png)
 **Fuente:** Análisis de distribución agrupado por variable 'pais' e 'ingreso\_mensual\_usd'.
 
 
