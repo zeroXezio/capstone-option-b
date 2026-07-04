@@ -40,7 +40,7 @@ Los encuestados muestran una disparidad notable en sus ingresos mensuales promed
 
 
 
-!\[Comparativa de Ingresos por País](charts/bar\_ingresos\_paises.png)
+!\[Comparativa de Ingresos por País](charts/01\_income\_by\_country.png)
 
 
 
@@ -50,7 +50,7 @@ El análisis de regresión lineal indica una correlación positiva moderada entr
 
 
 
-!\[Regresión Edad vs Ahorro](charts/scatter\_edad\_ahorro.png)
+!\[Regresión Edad vs Ahorro](charts/02\_age\_vs\_savings.png)
 
 
 
@@ -60,7 +60,7 @@ La estructura de gastos promedio regional evidencia que la vivienda y la aliment
 
 
 
-!\[Distribución de Gastos Regionales](charts/pie\_gastos\_regionales.png)
+!\[Distribución de Gastos Regionales](charts/03\_spending\_breakdown.png)
 
 
 
@@ -70,7 +70,7 @@ Los usuarios que poseen tarjetas de crédito activas reportan niveles de deuda t
 
 
 
-!\[Impacto de Tarjetas de Crédito](charts/box\_deuda\_tarjetas.png)
+!\[Impacto de Tarjetas de Crédito](charts/03\_spending\_breakdown.png)
 
 
 
@@ -80,7 +80,7 @@ Existe una correlación positiva medible entre el número de horas semanales ded
 
 
 
-!\[Uso de IA vs Satisfacción](charts/correlation\_ia\_satisfaccion.png)
+!\[Uso de IA vs Satisfacción](charts/04\_satisfaction\_by\_ia.png)
 
 
 
@@ -90,35 +90,10 @@ La carga financiera destinada a la vivienda supera el umbral crítico recomendad
 
 
 
-!\[Carga de Vivienda por País](charts/heatmap\_carga\_vivienda.png)
+!\[Carga de Vivienda por País](charts/05\_housing\_burden\_by\_country.png)
 **Fuente:** Análisis de distribución agrupado por variable 'pais' e 'ingreso\_mensual\_usd'.
 
-### Hallazgo 2: Relación Edad vs. Tasa de Ahorro (Ref: charts/02\_age\_vs\_savings.png)
 
-El análisis de regresión lineal indica una correlación positiva moderada entre la edad de los profesionales y su capacidad de acumulación de ahorro mensual. Este comportamiento demuestra que los usuarios más jóvenes enfrentan mayores barreras de liquidez inicial o falta de hábitos de retención de capital. En consecuencia, se recomienda priorizar micro-módulos de ahorro automático dirigidos específicamente al segmento de menor edad de la muestra.
-**Fuente:** Coeficiente de correlación de Pearson calculado entre 'edad' y 'ahorro\_mensual\_usd'.
-
-### Hallazgo 3: Desglose General de Gastos Regionales (Ref: charts/03\_spending\_breakdown.png)
-
-La estructura de gastos promedio regional evidencia que la vivienda y la alimentación representan los mayores drenajes de capital de los encuestados, superando por amplio margen a educación y salud. Esta fuerte concentración limita de forma severa el margen de maniobra de los jóvenes profesionales para afrontar imprevistos económicos. Por ello, el programa educativo debe incorporar simuladores avanzados de optimización de gastos fijos y negociación de contratos de arrendamiento.
-**Fuente:** Media calculada de las variables 'gasto\_vivienda\_usd' y 'gasto\_alimentacion\_usd'.
-
-### Hallazgo 4: Impacto de Tarjetas de Crédito y Deuda
-
-Los usuarios que poseen tarjetas de crédito activas reportan niveles de deuda total promedio significativamente más elevados en comparación con aquellos que no operan con dinero plástico. Este patrón revela que el acceso al crédito desregulado actúa como un catalizador del sobreendeudamiento debido a una baja comprensión de las tasas de interés compuestas. Por consiguiente, se debe establecer un taller obligatorio de salud crediticia antes de otorgar insignias de progreso en la plataforma.
-**Fuente:** Agrupación y promedio de 'deuda\_total\_usd' segmentado por 'tiene\_tarjeta\_credito'.
-
-### Hallazgo 5: Uso de IA vs. Satisfacción Financiera (Ref: charts/04\_satisfaction\_by\_ia.png)
-
-Existe una correlación positiva medible entre el número de horas semanales dedicadas a herramientas de Inteligencia Artificial y el índice de satisfacción financiera declarado. Este fenómeno sugiere que la adopción tecnológica optimiza la productividad laboral de los jóvenes, permitiéndoles acceder a mejores ingresos o gestionar sus finanzas con mayor eficiencia. En consecuencia, el programa debe integrar tutoriales prácticos sobre el uso de agentes de IA para finanzas personales.
-**Fuente:** Coeficiente de Pearson entre 'horas\_herramientas\_ia\_semana' y 'satisfaccion\_financiera'.
-
-### Hallazgo 6: Análisis de Carga de Vivienda Relativa (Ref: charts/05\_housing\_burden\_by\_country.png)
-
-La carga financiera destinada a la vivienda supera el umbral crítico recomendado del 30% del ingreso mensual neto en ciertos países evaluados, mostrando un gradiente de estrés financiero asimétrico. Esta sobrecarga sofoca la resiliencia económica de los profesionales independientes, incrementando el riesgo de impago ante crisis de volatilidad laboral. Por lo tanto, es imperativo estructurar fondos de contingencia específicos equivalentes a tres meses de renta para los países del extremo rojo del gradiente.
-**Fuente:** Ratio promedio de la relación entre 'gasto\_vivienda\_usd' e 'ingreso\_mensual\_usd' por país.
-
-\---
 
 ## 5\. Recomendaciones
 
