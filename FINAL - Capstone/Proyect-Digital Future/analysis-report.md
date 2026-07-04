@@ -34,7 +34,7 @@ Los encuestados muestran una disparidad notable en sus ingresos mensuales promed
 
 
 
-!\[Comparativa de Ingresos por País](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/01\_income\_by\_country.png)
+!\[image alt](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/01\_income\_by\_country.png)
 
 
 
@@ -44,7 +44,7 @@ El análisis de regresión lineal indica una correlación positiva moderada entr
 
 
 
-!\[Regresión Edad vs Ahorro](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/02\_age\_vs\_savings.png)
+!\[image alt](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/02\_age\_vs\_savings.png)
 
 
 
@@ -54,7 +54,7 @@ La estructura de gastos promedio regional evidencia que la vivienda y la aliment
 
 
 
-!\[Distribución de Gastos Regionales](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/03\_spending\_breakdown.png)
+!\[image alt](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/03\_spending\_breakdown.png)
 
 
 
@@ -74,7 +74,7 @@ Existe una correlación positiva medible entre el número de horas semanales ded
 
 
 
-!\[Uso de IA vs Satisfacción](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/04\_satisfaction\_by\_ia.png)
+!\[image alt](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/04\_satisfaction\_by\_ia.png)
 
 
 
@@ -84,7 +84,7 @@ La carga financiera destinada a la vivienda supera el umbral crítico recomendad
 
 
 
-!\[Carga de Vivienda por País](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/05\_housing\_burden\_by\_country.png)
+!\[image alt](https://github.com/zeroXezio/capstone-option-b/blob/a6ec33d2c12a82773739571cf85eb72a32fc0459/FINAL%20-%20Capstone/Proyect-Digital%20Future/charts/05\_housing\_burden\_by\_country.png)
 **Fuente:** Análisis de distribución agrupado por variable 'pais' e 'ingreso\_mensual\_usd'.
 
 
